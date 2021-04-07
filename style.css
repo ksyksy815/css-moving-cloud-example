@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: skyblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 5em;
+  
+}
+
+.banner #text {
+  max-width: 600px;
+  position: relative;
+  font-size: 4rem;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s ease-in;
+}
+
+.banner #castle {
+  transition: 0.2s ease-in;
+}
+.banner #castle:hover {
+  transform: translateY(-10px);
+}
+
+.banner .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;  /*클릭, 드래그 등이 안되게 해줌*/
+}
+
+.banner .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: animate calc(3s * var(--i)) linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+section {
+  position: relative;
+  padding: 75px 100px;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
